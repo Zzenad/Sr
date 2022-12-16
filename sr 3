@@ -1,0 +1,55 @@
+import numpy as g
+
+#Задание 1
+def f(n):
+    x = ((1 - n**2/2) * math.cos(n)) - n/2 * math.sin(n)
+    return x
+
+a, b, h = map(int, input().split())
+z = g.arange(a, b, h)
+for n in z:
+    y = f(n)
+    list = []
+    list.append(y)
+    array2 = g.array(list)
+    print(array2)
+
+
+#Задание 2
+def funcc(r):
+    u = []
+    if r > 0:
+        u.append('Положительное')
+    else:
+        u.append('Отрицательное')
+    if r - int(r) == 0:
+        u.append('Число целое')
+    else:
+        u.append('Число не целое')
+    if r % 2 == 0:
+        u.append('Число чётное')
+    else:
+        u.append('Число не чётное')
+    s = (len(str(r))) -1
+    u.append(s)
+
+    def funccc(r):
+        count = 0
+        while r % 1 != 0:
+            r *= 10
+            count += 1
+        return count
+    r = funccc(r)
+    u.append(r)
+    print(u)
+
+
+#Задание 3
+def goroda(w):
+    m,yy,hh = 'Москва','Томск','Екатеринбург'
+    if w in m:
+        print(m)
+    if w in yy:
+        print(yy)
+    if w in hh:
+        print(hh)
