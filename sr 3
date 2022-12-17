@@ -6,7 +6,7 @@ def f(n):
     return x
 
 a, b, h = map(int, input().split())
-z = g.arange(a, b, h)
+z = g.arange(a, b + 1, h)
 for n in z:
     y = f(n)
     list = []
